@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: chocolate;
+}
+
+.container {
+    width: 50%;
+    height: 60vh;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgb(53, 53, 53);  
+}
+
+
+.calc #calci{
+    width: 99%;
+    height: 50px;
+    border-radius: 4px;    
+    box-shadow: inset 8px 8px 8px rgb(131, 131, 131),
+    inset -8px -8px 8px rgb(131, 131, 131);
+    font-size: 30px;
+    outline: none;
+    border: none;
+    padding: 3px;
+    margin-bottom: 8px;
+    background-color: rgb(78, 78, 78);
+    color: white;
+
+}
+
+#can{
+    background-color: rgb(202, 76, 3);
+}
+#can:hover{
+    background-color: rgb(145, 12, 2);
+    color: white;
+}
+
+.buttons{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+.buttons .row button{
+    width: 80px;
+    height:30px;
+    border-radius: 4px; 
+    outline: none; 
+    border: none;  
+    margin: 6px;
+    box-shadow:  5px 5px 5px rgb(10, 8, 8),
+     -5px -5px 5px  rgb(76, 75, 75);
+     background-color: rgb(131, 131, 131);
+color: white;
+}
+
+
+@media (min-width:1196px) and (max-width:1326px) {
+    .container{
+        height: 90vh;
+    }
+    .buttons .row button{
+        width: 70px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width:1144px) and (max-width:1195px) {
+    .container{
+        height: 85vh;
+    }
+    .buttons .row button{
+        width: 60px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width: 988px) and (max-width:1144px) {
+    .container{
+        height: 77vh;
+    }
+    .buttons .row button{
+        width: 55px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width: 952px) and (max-width:988px) {
+    .container{
+        height: 78vh;
+    }
+    .buttons .row button{
+        width: 50px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width: 760px) and (max-width:952px) {
+    .container{
+        height: 80vh;
+    }
+    .buttons .row button{
+        width: 38.5px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width: 683px) and (max-width:760px) {
+    .container{
+        width: 62%;
+
+        height: 80vh;
+    }
+    .buttons .row button{
+        width: 45px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width: 577px) and (max-width:683px) {
+    .container{
+        width: 71%;
+
+        height: 75vh;
+    }
+    .buttons .row button{
+        width: 43px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width: 455px) and (max-width:577px) {
+    .container{
+        width: 90%;
+
+        height: 75vh;
+    }
+    .buttons .row button{
+        width: 43px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width: 420px) and (max-width:455px) {
+    .container{
+        width: 95%;
+
+        height: 75vh;
+    }
+    .buttons .row button{
+        width: 41.5px;
+        height:30px;
+    }
+    
+}
+
+@media (min-width: 373px) and (max-width:420px) {
+    .container{
+        width: 95%;
+
+        height: 75vh;
+    }
+    .buttons .row button{
+        width: 35px;
+        height:30px;
+        font-size: 10px;
+    }
+    
+}
+
+@media (min-width: 373px) and (max-width:420px) {
+    .container{
+        width: 95%;
+
+        height: 75vh;
+    }
+    .buttons .row button{
+        width: 35px;
+        height:30px;
+        font-size: 10px;
+    }
+    
+}
+
+@media (min-width: 331px) and (max-width:373px) {
+    .container{
+        width: 95%;
+
+        height: 66vh;
+    }
+    .buttons .row button{
+        width: 35px;
+        height:30px;
+        font-size: 10px;
+        margin: 3px;
+        box-shadow:  3px 3px 3px rgb(10, 8, 8),
+        -3px -3px 3px  rgb(76, 75, 75);
+        background-color: rgb(131, 131, 131);
+   
+    }
+    
+}
+
+@media (min-width: 278px) and (max-width:330px) {
+    .container{
+        width: 100%;
+
+        height: 65vh;
+    }
+    .buttons .row button{
+        width: 31px;
+        height:30px;
+        font-size: 8px;
+        margin: 1.2px;
+        box-shadow:  2.5px 2.5px 2.5px rgb(10, 8, 8),
+        -2.5px -2.5px 2.5px  rgb(76, 75, 75);
+        background-color: rgb(131, 131, 131);
+   
+    }
+    
+}
+
+@media (min-width: 160px) and (max-width:278px) {
+    .container{
+        width: 100%;
+
+        height: 60vh;
+    }
+    .buttons .row button{
+        width: 28px;
+        height:30px;
+        font-size: 8px;
+        margin: 1px;
+        box-shadow:  1.5px 1.5px 1.5px rgb(10, 8, 8),
+        -1.5px -1.5px 1.5px  rgb(76, 75, 75);
+        background-color: rgb(131, 131, 131);
+   
+    }
+    
+}
+
+.buttons .row button:hover{
+    background-color: rgb(190, 189, 189);
+    color: black;
+
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calc">
+            <input type="text" id="calci" placeholder="0" name="result">
+        </div>
+        <div class="buttons">
+            <div class="row">
+                <button value="sinin" type="button" onclick="sinin()">sin<sup>-1</sup></button>
+                <button value="cosin" type="button" onclick="cosin()">cos<sup>-1</sup></button>
+                <button value="tanin" type="button" onclick="tanin()">tan<sup>-1</sup></button>
+                <button type="button" value="log" onclick="log()">log<sub>10</sub></button>
+                <button aria-colspan="2" onclick="rem()" id="can">C</button>
+                <button type="button" value="BACKSPC" onclick="BACKSPC()" id="can">x</button>
+                <button class="btn">%</button>
+            </div>
+            <div class="row">
+                <button value="sin" type="button" onclick="sin()">sin</button>
+                <button value="cos" type="button" onclick="cos()">cos</button>
+                <button value="tan" type="button" onclick="tan()">tan</button>
+                <button class="btn">.</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">/</button>
+            </div>
+            <div class="row">
+                <button value="x^2" onclick="square()">X<sup>2</sup></button>
+                <button value="x^3" onclick="cube()">X<sup>3</sup></button>
+                <button value="x^4" onclick="quat()">X<sup>4</sup></button>
+
+                <button value="x^x" onclick="power()">X<sup>x</sup></button>
+                <button class="btn">6</button>
+                <button class="btn">7</button>
+                <button class="btn">*</button>
+            </div>
+            <div class="row">
+                <button value="x^y" onclick="powery()">X<sup>e</sup></button>
+                <button value="x!" onclick="fact()">X!</button>
+                <button type="button" value="sqrt2" onclick="sqrt2()"> &radic;</button>
+                <button type="button" value="sqrt3" onclick="sqrt3()"> &#8731;</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">-</button>
+            </div>
+            <div class="row">
+                <button type="button" value="pi" onclick="pi()">pi</button>
+                <button type="button" value="e" onclick="e()">e</button>
+                <button type="button" value="e^x" onclick="exp()">e<sup>x</sup></button>
+                <button type="button" value="ln" onclick="ln()">ln</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">+</button>
+            </div>
+            <div class="row">
+                <button class="btn">(</button>
+                <button class="btn">)</button>
+                <button class="btn">,</button>
+                <button class="btn">00</button>
+                <button class="btn">0</button>
+                <button class="btn">1</button>
+                <button onclick="calci.value=eval(calci.value)">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var calci = document.querySelector('#calci');
+    var btn = document.querySelectorAll('.btn');
+
+    for (item of btn) {
+        item.addEventListener('click', (e) => {
+            btntext = e.target.innerText;
+            if (btntext == '*') {
+                btn = '*';
+            }
+            if (btntext == '/') {
+                btn = '/';
+            }
+            if (btntext == '+') {
+                btn = '+';
+            }
+            if (btntext == '-') {
+                btn = '-';
+            }
+            calci.value += btntext
+        });
+    }
+    function sinin() {
+        calci.value = Math.asin(calci.value);
+    }
+    function cosin() {
+        calci.value = Math.acosh(calci.value);
+    }
+    function tanin() {
+        calci.value = Math.atan(calci.value);
+    }
+    function sin() {
+        calci.value = Math.sin(calci.value);
+    }
+    function cos() {
+        calci.value = Math.cos(calci.value);
+    }
+    function tan() {
+        calci.value = Math.tan(calci.value);
+    }
+    function BACKSPC() {
+        var a = calci.value;
+        calci.value = a.substr(0, a.length - 1);
+    }
+    function rem() {
+        calci.value = " ";
+    }
+    function square() {
+        calci.value = Math.pow(calci.value, 2);
+    }
+    function power() {
+        calci.value = Math.pow(calci.value, calci.value);
+    }
+    function powery() {
+        calci.value = Math.pow(calci.value, 2.71828182846);
+    }
+    function exp() {
+        calci.value = Math.pow(2.71828182846, calci.value);
+    }
+    function cube() {
+        calci.value = Math.pow(calci.value, 3);
+    }
+    function quat() {
+        calci.value = Math.pow(calci.value, 4);
+    }
+    function sqrt3() {
+        calci.value = Math.cbrt(calci.value, 3);
+    }
+    function sqrt2() {
+        calci.value = Math.sqrt(calci.value, 2);
+    }
+    function log() {
+        calci.value = Math.log10(calci.value);
+    }
+    function ln() {
+        calci.value = Math.LN10(calci.value);
+    }
+    function pi() {
+        calci.value = 3.14159265359;
+    }
+    function e() {
+        calci.value = 2.71828182846;
+    }
+
+    function fact() {
+        var i, num, f;
+        f = 1;
+        num = calci.value;
+        for (i = 1; i <= num; i++) {
+            f = f * i;
+        }
+        i = i - 1;
+        calci.value = f;
+    }
+</script>
+
+</html>
